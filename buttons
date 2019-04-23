@@ -1,0 +1,49 @@
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import java.awt.*;
+import java.lang.String;
+import java.awt.Button;
+import java.util.Collection;
+
+public class Main extends Application {
+
+        public static void main(String[] args) {
+            launch(args); //this method calls Application and then runs everything in start
+        }
+
+
+        @Override
+        public void start(Stage primaryStage) throws Exception {
+           primaryStage.setTitle("Title");  //window which opens
+            primaryStage.setWidth(300);
+            primaryStage.setHeight(300);
+
+            Pane root = new Pane();//working buttons etc
+            Button button1 = new Button();
+            button1.setText("Click");
+
+
+
+            Scene scene = new Scene(root);//as variable need root , and in root is in everything-buttons etc
+
+
+//            button = new Button();
+//            button.getName("klklklkl");
+
+//            StackPane layout = new StackPane();
+//            boolean add = layout.getChildren(button);
+
+
+//            Scene scene= new Scene(layout, 300, 250); beacause is setWidth and Hight
+
+            root.getChildren().addAll(button1);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }
+    }
